@@ -1,0 +1,5 @@
+1.Create user Shubham.shubham can only launch ec2 instance in Mumbai 
+region
+2.create S3 busket and share it with another account
+3.craete user linux. Linux user can only read demo bucket contains
+4.host static website and manage log.

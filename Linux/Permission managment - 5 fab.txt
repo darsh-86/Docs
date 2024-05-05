@@ -1,0 +1,108 @@
+Permission in Linux 
+
+types of permission 
+                 
+                         Values
+1) Read                4
+2) write               2
+3) Execute          1
+
+Fields of file      **Type of file
+
+1) User define file
+
+" _ " normal file
+" d " directory file
+" l " link
+-------------
+2) System define file
+
+"S"   socket file 
+"b"   block device file
+"p"   pipe
+"c"   characterdefine file
+----------------
+r-4, w-2, x-1
+
+rwx - owner ,  rwx - group,  rwx - others
+
+
+
+umask   -> to determine or set file permission of newly created file (full permission - default permission) = umask
+
+how to set permanent umask?
+--------------------
+lin count
+ 
+by default directory lin count is 2 & for file is 1 ( when we create new file count is always +1 )
+ 
+(check directory lin count in /boot )  using ls cmd
+
+
+mkdir -p -> to create directory in parent directory when you are present in same directory
+
+--------------
+
+Hardlink & softlink
+
+ln file.name hard_link  -> to create a hardlink of file
+
+we can't create hardlink of directory but we can create softlink of both
+
+softlink is file or directory path link like shortcut key of windows
+
+ln -s /root/dir/ /opt/soft_link 
+
+softlink lin count is always 1 of directory & file 
+
+data  is replecate in hardlink & softlink
+
+deleting original file or directory then hardlink or softlink is useless & its reveres if deleted hardlink or softlink
+
+
+-----------
+**hardlink** 
+inod number always same
+
+
+
+
+**softlink**
+inod number will change
+
+------------
+File Permissions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,70 @@
+Process Management
+
+**cmd
+
+systemd is a first process start when we start the application & it's PID is 1.
+
+ps - > report a snapshot a current process 
+top -> shows live status of process
+ps -elf  -> This provides a more concise output, focusing on essential information like process ID, 
+user, CPU time, memory usage, and command name.
+sleep 1000 (seconds) -> system will be go for next 1000 seconds
+ctrl + z -> to stop above process
+sleep 1000 & -> to run process in background (use &) 
+jobs - to check jobs 
+ps -aux ->  to check currently running process and more info about it.
+ps -aux |grep sleep -> 
+kill PI - > to kill the running process
+
+------------------------------------------------------------------------
+ps -aux vs ps -elf 
+
+Both commands show all running processes.
+BSD style (ps -aux) provides more comprehensive information.
+SysV style (ps -elf) provides a concise output.
+Both are generally accepted on modern systems.
+Refer to the ps man page for specific details on your system.
+
+---------------------------------------------
+
+field of ps -aux
+
+user id 
+PID
+ % cup utilisation  
+%MEM
+VSZ -> Virtual set size - virtual memory process access
+RSS -> Resident set size - physical memory process access
+-------------------------------------------------------------
+STAT -> This is a command-line tool used to display information 
+                  about files and directories 
+fields of stat
+r - running
+s -sleeping
+d- uninterrptible sleep
+t - Stoped
+z -zombie
+i- idle
+< - high priority process
+n - low priority process 
+----------------------------
+
+cmd - renice ?
+
+renice -n +10 -p PI - change process priority (+10 will increase priority by previous value + 10 )
+
+renice -n -10 -p PI ->
+
+priorty valuve of process between (-20) to (90)
+by default priority value is 80
+ 
+pkill use ?
+killall sleep -> to kill all sleep jobs
+ 
+
+
+
+
+
+
+

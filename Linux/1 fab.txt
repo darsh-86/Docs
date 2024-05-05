@@ -1,0 +1,23 @@
+inode
+sleep 100 &&
+ 
+how to download packages & install ?
+ chattr cmd use?
+ locate cmd use cases ?
+chgrp
+grep -> grep command Grep command in Unix/Linux is the short form of 'global search for the regular expression'. The grep command is a filter that is used to search for lines matching a specified pattern and print the matching lines to standard output
+
+find -name "file or directory name"  or find / -name "file or directory name"
+updatedb 
+
+yum -y update -> Update the package repository:
+
+Hyper V ?
+
+
+
+
+
+
+
+

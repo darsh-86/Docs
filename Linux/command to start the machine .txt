@@ -1,0 +1,51 @@
+command to start the machine 
+Vagrant up darsh
+Vagrant ssh darsh
+
+to destroy the machine
+Vagrant destroy darsh
+
+uname -> to check your kernal name 
+lscpu -> cpu related details
+df -hT
+ls -> list files and folders
+free -> memory details (RAM)
+cd -> to change directory
+cd / -> to go in the top level directory ( "/ " is top level directory )
+man -> to open the manual 
+pwd -> print working directory
+hostname -> to show the host name
+
+$ -> for local user
+# -> for root user
+
+users in linux
+1) root  -> shell  -> login shell 
+2) local user  -> shell -> login shell
+3) system user  -> shell -> no login shell
+
+ls -ltr -> shows details of all files at your current location
+allias for ltr is ll
+sudo passwd root -> to set root user login password
+df -hT -> to see the virtal storage h for human readable and T
+chmod 777 -> to give the permission to execute
+
+command -> command is a executable program
+all the commands for local user are present in /bin
+all the commands for root user are present in /sbin
+
+cd -> change directory
+/ -> it is a top level directory
+
+sudo passwd root -> to set the password for root user
+su - root -> to login as a root user
+su -> switch user
+
+su vagrant -> to change from root user to local user
+~ -> indicates home directory
+
+ls -a -> to view hidden files
+
+touch -> to create an empty file
+
+shut down now -> shut down

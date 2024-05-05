@@ -1,0 +1,12 @@
+1.Implement IAM policies to enforce multi-factor authentication (MFA) for IAM users attempting to perform sensitive actions, such as terminating EC2 instances or deleting S3 buckets.
+
+
+2.Set up a lifecycle policy for an S3 bucket to automatically transition objects to less expensive storage classes, such as moving infrequently accessed data to Glacier for long-term archiving.
+
+3.Configure cross-region replication for an S3 bucket to replicate the bucket contents to a different region for data redundancy and disaster recovery purposes.
+
+4.Generate pre-signed URLs for specific objects in an S3 bucket, allowing time-limited access to those objects for authorized users.
+
+5.create a policy for s3 to prevent deletion of object even for root
+
+6.Create a custom Amazon Machine Image (AMI) from an existing EC2 instance, which can be used to launch identical instances in the future.share the AMI with other account.

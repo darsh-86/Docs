@@ -1,0 +1,70 @@
+*Basic command
+
+1) You want to create a new directory called project1 to store all the files related to your project. What command would you use?
+-> mkdir project1
+
+2) You need to copy a file called report.txt from your home directory to the documents directory. What command would you use?
+
+-> cp /home/vagrant/report.txt  directory path/d1
+ 
+3) You want to rename a file called oldname.txt to newname.txt. What command would you use?
+
+->mv oldname.txt newname.txt
+
+4) You have a directory called data with multiple files and subdirectories. You want to delete this directory and all its contents. What command would you use?
+
+-> rm -r  directory path/directory name  or rm -rvf data
+      
+5) You want to search for all files in the current directory and its subdirectories that contain the word "error". What command would you use?
+
+-> ls error* 
+
+6)You have a file called log.txt that is very large. You want to view the last 5 lines of the file. What command would you use?
+
+-> tail -no.of.lines filename
+
+
+7) You want to find out the disk usage of a directory called music. What command would you use?
+
+-> du - music 
+
+If we want to print sizes in human readable format(K, M, G), use -h option -> [du -h /home/Mandeep/test]  
+Use -a option for printing all files including directories. -> [du -a -h /home/mandeep/test]
+Use -c option to print total size -> [du -c -h /home/mandeep/test]
+
+
+8) You want to copy all files in the current directory and its subdirectories that have the extension .txt to a new directory called text_files. What command would you use?
+
+-> cp  
+
+9) You have a file called large_file that is too big to be copied using a single cp command. You want to split the file into smaller pieces, each with a size of 100 MB, and save them in a directory called split_files. What command would you use?
+
+-> 
+
+10) You want to find all files in the current directory and its subdirectories that have the word "password" in their name and delete them without prompting for confirmation. What command would you use?
+
+-> rm -rvf password*
+
+-> find . name "file name" -exec rm {} =  
+
+11) You want to create a new directory called project and copy all files in the current directory that have the extension .txt or .md to the new directory. What command would you use?
+
+-> cp -rvf project/*.{txt,md} newdir
+
+12) A server administrator wants to check the system load average. What command would you use to do this?
+
+-> uptime  or  cat /proc/loadavg or  w & top or free -m for memory usage or ps auxf for process list  
+
+13) merge two files using paste command
+
+-> [paste file1 file2 ] or [paste file1 file2 file3 ] for tree file  or  Only one character is specified [ paste -d "|" number state capital ]  output -> 1|Arunachal Pradesh|Itanagar & 
+More than one character is specified [ paste -d "|," number state capital ] output -> 1|Arunachal Pradesh,Itanagar & 
+[paste -s number state capital] , [paste -s -d ":" number state capital] , [cat capital | paste - -] , [paste - - - < capital ] 
+$ cat capital | paste - -
+
+ 14 ) use rename command
+
+mv oldname newname
+
+
+use wall command to send mesg to all user.

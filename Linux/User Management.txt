@@ -1,0 +1,131 @@
+
+bash -> refresh
+ctrl + d -> logout
+x in etc/passwd is link of encrypted password from shadow file
+
+
+** User Management **
+
+useradd -> to create a local user
+
+whenever a new user is created a user gets uid and gid
+home directory is created in /home/username
+skeleton file is copied from /etc/skel (ex .bashrc, .bash_profile, .bash_logout)
+
+mail file will be created in /var/spool/mail/akash
+
+changes occur in the following files 
+
+/etc/passwd
+/etc/shadow
+/etc/gshadow
+/etc/shadow
+
+passwd is related to shadow and group is related to gshadow
+
+user		uid
+root		0
+system 		1-999
+local		1000 and above
+
+
+** fileds of passwd **
+
+1) username
+2) link of encrypted password from /etc/shadow
+3) uid
+4) gid
+5) comment
+6) home directory of local user
+7) login shell
+
+ex : azhar:x:1001:1001::/home/azhar:/bin/bash
+
+
+** fields in group **
+
+1) group name
+2) encrypted password link of group from gshadow file
+3) gid
+4) list of group members
+
+** fields of /etc/gshadow **
+
+1) group name
+2) encrypted password
+3) group admin name
+4) list of group members
+
+** fileds of /etc/shadow **
+
+1) username
+2) encrypted password
+3) last password change date since 1 jan 1970
+4) minimum days
+5) maximum days
+6) warning days
+7) inactive days
+8) Expiry
+9) Future use
+
+
+
+-------------------------
+usermod -> modify user
+groupadd -> to create new group or add group
+gpasswd -a username groupname -> to add user to the group
+gpassed -M "user1,user2,user3" groupname -> to add multiple users but the users already present will be removed
+
+gpasswd groupname -> to set password to the group
+
+gpasswd -A username groupname -> to make admin for the group
+gpasswd -A .. -> Remove Admin
+
+userdel username -> deletes user without removing the user resources
+
+userdel -r username -> deletes user and all the resources
+
+groupdel groupname -> delete group 
+
+chage -l username -> to see the password related information
+
+
+-----------------------------
+
+Q) how to change the minimum number of days of user password
+chage --mindays no.ofdays username
+
+Q) how to change the maximum number of days of user password
+chage --maxdays no.ofdays username
+
+Q) What is inactive days? how to change it?
+Ans: Inactive days are the number of days for which the account can be inactive before being disabled
+chage --inactive no.ofdays username
+
+Q) How to set user account expiry date?
+chage -M no.ofdays username
+
+Q) How to set warning days?
+chage --warndays no.ofdays username
+
+Q) How to change last password change date?
+chage passwd
+
+
+
+day -s "dd mm yyyy" -> to set the date
+date -> to check date
+chage -E "25 feb 2024" username -> to set account expiry
+
+usermod -s shellpath username -> to change the shell of user
+
+shell path /sbin/nologin or /bin/bash
+
+
+usermod -l "new name of user" "old user" -> to rename user
+
+usermod -d "path u want to give" -m username -> to change the path of home directory
+
+useradd -d "path u want to give" user
+
+chgrp groupname filename -> to change the group of file

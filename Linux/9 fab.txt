@@ -1,0 +1,44 @@
+Job Scheduling 
+""""""""""""""""""
+**tools** 
+
+anacorn - desktop server , task will perform if this server close & restart
+
+at -> non-periodic
+
+cron -  (perodic) if server get closed, task will not perform 
+
+**fields of  crontab**
+
+'min'  'hr'  'day of month'  'month'  'day of week'  
+*         1-4     *                            *             0-6 (sunday)
+                                                                 1-6 (monday)
+
+  " * " use for  all
+
+crontab tracks our all scheduling with the help of demon service called as  "crond", 
+after schedulong crontab we have to restart our demon with cmd ->  "systemctl start crond"
+
+**cmd**
+
+at "hr:min: date -> to set schedule 
+atq -> to check schedule, once job is completed schedule not appear.
+atrm job.id  -> to remove schedule
+
+crontab -e 
+crontab -l /
+crontab -e -u username -> set crontab for particular user
+crontab -l -u username -> list crontab for particular user
+crontab -r -u username -> remove crontab for particular user
+
+
+systemctl restart crond ->
+
+vim /etc/crontab -> explore the file
+
+1) To schedule a job at particular month in every year
+
+2) to create file at 9 pm only on sunday , wednesday and friday
+
+3) to schedule a job at every 120 min start at 00:00 
+

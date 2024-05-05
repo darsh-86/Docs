@@ -1,0 +1,82 @@
+** Archive and Compression **
+
+1) Archive (bundling of files) 
+tar -option destination source
+tar -option  /home-backup/home.tar  /source(home)
+
+
+2) compressed  
+gzip	10 -> 7	gz
+bzip	10-> 5	bz
+xzip 	10-> 2	xz
+
+tar -> tape archive
+
+3) Archive and compress
+
+-cvf  ->  create verbose file
+
+*  tar -cvf    /root/etc.tar    /etc          -> to create archive file
+            |             |        |           |_ Source
+       optins        |        |
+                          |    archive file  
+                destination 
+
+*  tar -xvf  /etc.tar    ->  to extract the tar file
+
+how to extract tar file at particular location?
+
+=> tar -xvf etc.tar -C /home/akash/dir
+
+gzip etc.tar -> to compress the file
+
+gunzip etc.tar.gz -> to unzip the file
+
+
+bzip2 etc.tar -> to compress the file
+bunzip2 etc.tar.bz2
+
+xz etc.tar
+unxz etc.tar.xz
+
+** for gzip and archieve **
+tar -czvf destination source
+tar -czvf /root/etc.tar.gz /etc
+tar -czvf etc.tar.gz etc
+
+tar -xzvf etc.tar.gz -C /home
+
+
+** bzip and compress **
+tar -cjvf /home/eee/etc.tar.bz etc -> to compress and archieve
+
+tar -xjvf /home/eee/etc.tar.bz /mnt/
+		destination	source
+
+** xzip compress **
+
+tar -cJvf /home/eee/etc.tar.xz etc
+--------------------------------------------------
+
+du -sh filename -> to check size of file
+
+syntax for tar 
+
+tar -tvf tarfilename -> to check the available data in the file
+
+tar -xvf  tar filename -C 
+
+use -C option if you want to extract tar file in another location otherwise no option is needed
+
+tar -xvf etc.tar -> to extract tar file on same location
+tar -xvf etc.tar -C /mnt -> to extract tar file on another location
+
+Note : First you have to archive directory or file and then you have to compress
+
+tar -czvf etc.tar.gz etc
+
+
+------------------------------------------
+getfact filename -> to view the permissions
+
+

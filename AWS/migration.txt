@@ -1,0 +1,71 @@
+CREATE DATABASE your_database_name;
+
+USE your_database_name;
+
+CREATE TABLE your_table_name (
+    show_id VARCHAR(50),
+    type VARCHAR(50),
+    title VARCHAR(255),
+    director VARCHAR(255),
+    cast VARCHAR(255),
+    country VARCHAR(255),
+    date_added VARCHAR(50),
+    release_year INT,
+    rating VARCHAR(10),
+    duration VARCHAR(20),
+    listed_in VARCHAR(255),
+    description TEXT
+);
+
+
+
+
+
+
+
+LOAD DATA LOCAL INFILE '/path/to/your/csv/file.csv'
+INTO TABLE your_table_name
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES;
+
+------------------------------------------
+
+CREATE TABLE new_list (
+    id INT,
+    first_name VARCHAR(255),
+    last_name VARCHAR(255),
+    email VARCHAR(255),
+    gender VARCHAR(10),
+    postal_code VARCHAR(20),
+    language VARCHAR(50),
+    job_title VARCHAR(255),
+    vehicle_make VARCHAR(50),
+    vehicle_model VARCHAR(50)
+);
+
+
+LOAD DATA LOCAL INFILE '/home/ec2-user/MOCK_DATA.csv'
+INTO TABLE new_list
+FIELDS TERMINATED BY ',' 
+LINES TERMINATED BY '\n' 
+IGNORE 1 LINES;
+
+
+SELECT * FROM new_list;
+
+SELECT id, first_name, last_name, email, gender, postal_code, language, job_title, vehicle_make, vehicle_model 
+FROM new_list;
+
+SELECT * FROM new_list
+LIMIT 10;
+
+SELECT * FROM new_list
+LIMIT 10 OFFSET 9;
+
+SELECT * FROM new_list
+LIMIT 1 OFFSET 19;
+
+
+-------------------------------------

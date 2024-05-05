@@ -1,0 +1,161 @@
+google develop an internal system called borg (later named as omega) to depoly and manages thousand of gooogle application 
+problem with scaling  up the container 
+cant communicate with each other
+autoscaling load balanancing
+container had to be managed carefully 
+
+Terms  to know:
+monolathic application : single stone appl. , every 
+microservice
+Orchestration tool
+
+
+features of k8s:
+
+orchestration 
+autoscaling
+load balancing 
+ Platform independent ( cloud /virtual / physical )
+rollback 
+health monitoring of pod 
+batch execution
+
+Comparation between k8s and Docker swarm
+
+
+Features                                                  k8s                                                                   docker swarm
+ 
+Installation & cluster  confi            complicating & time consuming                   fast and easy
+
+
+Archirecture 
+
+there are three types
+
+1) Single master  multiple nodes 
+ ______________________
+|                        node:1        |
+|   m:1                                  |
+|                       node:2        |
+|_____________________|
+
+2) singlle master single nodes
+   ____________________
+  |     master      node          |
+  |____________________|
+
+3) Mutiple master multi nodes
+
+ ______________________
+|                        node:1        |
+|   m:1                                  |
+|   m:2                                 |
+|                       node:2        |
+|_____________________|
+
+
+ ## Master  control plane  
+
+ ___________
+
+Cluster -->   Node --> Pod --> Conatainer --> Application 
+____________
+
+
+Working Nodes:
+
+1) Create the manifest file for k8s objects (json/yaml )
+2) Apply the file to cluster ( to  master ) to bringe into desired state.
+3) Pods runs on node which is controlled by master.
+ 
+
+Role of Master 
+
+Kubernetes cluster runs on VM
+
+1)
+2)
+3)
+4)
+
+Components of master plane
+
+1) API server 
+it intract with directly with users
+it means to scale automatically  according to load or request load
+front end control
+
+2) Cube Scheduler
+When user make request for creatoin or management of pods, its going to take the action on this request 
+if any mismatch occures in number of pods runs then it will make them as desired no pods 
+its take hardware configuration oinformation from etcd and that helps to decide the best node for pod creation
+
+
+
+3) Controller Manager
+Make   sure actual state equals to desired state
+if k8s on cloud the cloud controller manager
+if k8s on non-cloud kube-controller manager
+ 
+Controller compontes 
+
+node controller 
+route
+service 
+volume
+
+ 
+4) ETCD
+ Store metadata or status of cluster 
+consistent and high availibilty 
+store data in key value form
+  Features : 
+
+
+
+
+
+
+
+Componenets of worker plan 
+
+1) Kube Proxy 
+2) Kubelet 
+3) pods 
+4) Container  Engine
+
+
+Kube Proxy : 
+   
+       It is responsible for networking and responsible to allocate the ip for pods
+ its run on each nodes 
+ist communicatoin to master via api server
+
+Kubelets :
+    
+   agent running on code 
+  listen the k8s master  ( pod creatin request)
+  provide pod info to etcd via API Server  
+  use port 10255
+  send success  /failure status to controller palne
+
+
+    Pods:  
+      smallest unit of k8s
+     once pod can conatins multiple conatiner 
+     Pods having its IP Address but container don't have
+
+container engine: 
+work with kubelet
+
+       
+     
+
+
+
+
+
+
+
+
+ 

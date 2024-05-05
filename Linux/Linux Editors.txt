@@ -1,0 +1,79 @@
+
+Types of Editors in Linux
+1) Graphical 
+2) Command
+
+1) Graphical -> Gedit , kedit , MsOffice
+2) Command -> nano, vim, vi, pico
+mostly used vim
+
+** Vim Editor modes
+1) Command mode 
+2) Insert mode
+3) Visual mode
+4) Execution mode
+
+
+
+
+dw -> delete word
+3dw -> to delete 3 words in vim editor
+dd -> delete line
+3dd -> delete 3 lines
+
+cw -> cut word
+cc -> cut line
+
+p -> paste below the cursor
+P -> paste on the cursor line
+
+G -> go to the bottom of the page
+gg -> go the top of the page
+
+yw -> copy word
+3yw -> copy 3 words
+yy -> copy line
+4yy -> copy 4 lines
+
+
+R -> Replace character
+
+u -> undo
+ctrl + r -> redo
+
+insert mode commands
+
+I -> Insert mode with cursor at the first word of the line
+A -> cursor at the end of the line
+
+o -> space between line or blank line
+
+O -> space above cursor
+
+c50gg -> jump to line 50
+
+how to copy multiple files ?
+
+q! -> quit forcefully without saving the changes
+
+wq! -> to save and exit the file forcefully
+:x -> shortcut of :wq
+
+set nu -> set numbers
+set nonu -> remove numbers
+
+/name -> to highlight in editor
+nohl -> remove highlight
+
+Q) replace a word with your name with the help of vim editor command (word should reflect 3-4 times)
+      ->: %s/old/new/g
+Q) 
+
+
+v -> visual mode selects words
+V -> visual mode selects line
+S -> deletes line with insert mode on
+s -> removes letter with insert mode on
+
+Q) What is the use of 2> and 2>> ?
+Q) what is the use of &> and &>> ?

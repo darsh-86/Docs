@@ -1,0 +1,19 @@
+less -> use space key to switch page 
+           B key to previous page
+           enter key to go line by line
+
+more ->
+cat ->
+head -> shows file content from top 
+         by default sh0ws  10 line from top 
+        head  -20 file name
+
+tail -> shows last lines
+ by default - 10 line from bottom
+tail -10 file name
+
+sed -n '10p' file name -> to print 10th line of the file
+sed -n '10,18p' filename  -> to print 10 to 18th line
+head -n 10 file name | tail -n 21  -> 
+
+

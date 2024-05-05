@@ -1,0 +1,128 @@
+**Package Management**
+
+red hat based
+yum - > yellowdog updater modified  
+rpm -> 
+
+debian based
+apt ->
+apt -get ->
+-----------------
+Red hat family
+low level tool  - rpm
+high level tool - yum
+
+red hat exmple -> AlmaLinux, Oracle, centos, 
+
+
+Debian family 
+low level tool  - apt
+high level tool -  apt-get
+
+Example : Ubantu, Kali linux, Mx Linux
+
+------------------------------
+
+yum  install  package  -y   -> to install package, use "-y " to allow download dependensiec 
+systemctl enable package
+systemctl start package
+system status package
+
+yum remove     -	Removes the specified packages
+yum search       -	Searches package metadata for keywords
+yum info           -	Lists description
+yum update     -	Updates each package to the latest version
+yum repolist    - 	Lists repositories
+yum history     -	Displays what has happened in past transactions
+yum provides  -            to list  avilable version of packages
+yum list installed - 
+
+**yum -options**
+
+Options	        |    Purpose
+""""""""""""""""""""""""""""""""""""""""""
+-C	        |    Runs from system cache
+--security	        |    Includes packages that provide a fix for a security issue
+-y	        |    Answers yes to all questions
+--skip-broken  |    Skips packages causing problems
+-v	        |    Verbose
+---------------------------------------------------------------
+
+cmd -> tree  inastall ? 
+yumdownloader tree
+
+
+
+-----------------------------
+
+RPM (RPM Package Manager)
+
+rpm -ivh link -> to install package using rpm
+rpm -ql  package -> to search  package location
+---------------------------------
+Mode	Description
+
+-i	Installs a package
+-U	Upgrades a package
+-e	Erases a package
+-V	Verifies a package
+-q	Queries a package 
+---------------------------------
+General options	Purpose
+
+-? | --help	            Prints help
+--version	            Prints version number
+-v	            Prints verbose output
+--------------------------------------------
+To install or upgrade an .rpm package using RPM, issue this command:
+
+rpm -i package-file
+
+rpm -U package-file
+
+rpm -ivh package-file
+
+The flag -i is for install, U is for upgrade, v for verbose, h for hash (this option displays the # as a progress bar for the operation).
+ In this example, v and h are optional flags.
+
+--------------------------------
+
+RPM VS YUM ?
+
+yum searh vs 
+
+CentoOS-Base.repo ? 
+
+# vim CentoOS-Base.repo 
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

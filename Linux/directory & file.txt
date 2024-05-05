@@ -1,0 +1,54 @@
+1) Make an empty file in home directory of root user (file.xyz)
+
+cmd -> touch file.xyz
+
+2) Move file.xyz in home directory of local user
+
+cmd -> mv file.xyz /home/vagrant
+
+3) Add some content in file.xyz
+
+cmd -> echo "hello this is my test file" > /home/vagrant/file.xyz
+
+4) Copy the content of file.xyz in home directory of root user
+
+cmd ->  cp /home/vagrant/file.xyz /root   ( to check file -> "ls" & read content  -> "cat" file.xyz )
+ 
+5) Make a directory in home directory of local user (name abc)
+
+mkdir /home/vagrant/abc 
+
+6) remove abc dir
+
+rmdir /home/vagrant/abc 
+
+7) remove file.xyz
+
+rm -r /home/vagrant/file/xyz
+
+
+useradd username -> to add new user
+touch -> to create an empty file
+mv -> to move
+cp -> to copy
+less -> to view content of file
+cat -> to view content of file
+touch file.txt{1..5} -> to create 5 (multiple) files (double dot compulsory)
+rm -rvf file.txt{1..500} -> to remove multiple files within given range
+
+
+Editors -> vim, nano, vi
+
+rmdir -> to only remove empty directory
+
+rm -> to remove files or directories
+
+rm -r -> to remove non empty directory
+
+echo -> to print something on screen [ echo "text to print" > file or directory loction] exp. = echo "hello" /home/vagrant/darsh/d1
+
+ll -> alias for ls -l
+
+alias -> to check the alias
+
+alias shortname='command' -> to set alias
